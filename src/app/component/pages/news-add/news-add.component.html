@@ -1,0 +1,40 @@
+
+
+<form class="form-horizontal" ng-Form>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Title</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control"  [(ngModel)]="title"  placeholder="Title....">
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Category</label>
+    <div class="col-sm-6">
+      <input  class="form-control" [(ngModel)]="category" >
+
+
+    </div>
+  </div>
+  <div class="form-group">
+    <label  class="col-sm-2 control-label">Post</label>
+    <div class="col-sm-9">
+
+      <input class="form-control"  [(ngModel)]="text" placeholder="News post.....">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="Autor" class="col-sm-2 control-label">Autor post</label>
+    <div class="col-sm-6">
+      <input type="text" class="form-control" id="Autor" [(ngModel)]="autor" placeholder="Autor....">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button class="btn btn-default" (click)="addItem(title, category, text, autor)">Add post</button>
+    </div>
+  </div>
+</form>
+
+<div >
+  {{title}} {{category}} {{text}} {{autor}}
+</div>

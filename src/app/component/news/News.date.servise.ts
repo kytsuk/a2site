@@ -35,6 +35,6 @@ export class DataService{
     }
     addData(title: string, category: string, text: string, autor: string){
 
-        this.data.push(new News(name, category, text, autor));
+        this.data.unshift(new News(name, category, text, autor));
     }
 }
