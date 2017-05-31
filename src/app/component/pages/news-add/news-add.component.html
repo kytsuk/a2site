@@ -1,49 +1,46 @@
-
-<div class="panel">
-  <div class="form-inline">
-    <div class="form-group">
-      <div class="col-md-8">
-        <input class="form-control" [(ngModel)]="title" placeholder = "Title" />
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-8">
-        <input class="form-control" [(ngModel)]="category" placeholder = "Category" />
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-6">
-        <input type="text" class="form-control" [(ngModel)]="text" placeholder="Post" />
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-6">
-        <input type="text" class="form-control" [(ngModel)]="autor" placeholder="Autor" />
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-offset-2 col-md-8">
-        <button class="btn btn-default" (click)="addItem(title, category, text, autor)">Add</button>
+<div class="conteiner ">
+<div class="row add-news">
+  <form NgForm>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-6">
+      <input class="form-control" name="title" [(ngModel)]="title" placeholder = "Title"  required />
+      <div [hidden]="title.valid || title.untouched" class="alert alert-danger">
+        Не указано имя
       </div>
     </div>
   </div>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-4">
+      <select class="form-control" name="category"
+ [(ngModel)]="category" placeholder = "Category" required>
+        <option *ngFor="let categ of categoryitem " [ngValue]="categ">{{categ}}</option>
+      </select>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-6">
+      <textarea type="text" name="text" class="form-control" [(ngModel)]="text" placeholder="Post" rows="7" required> </textarea>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-6">
+      <input type="text" class="form-control" name="autor" [(ngModel)]="autor" placeholder="Autor" required/>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="col-xs-offset-3 col-xs-2">
+      <button class="btn btn-success btn-lg my-btn" (click)="addItem(title, category, text, autor)">Add</button>
+    </div>
+  </div>
+  </form>
 
 </div>
 
-<div class="container" >
-  <div class="row">
-    <div class="col-xs-12" >
-      <h2>Add Post</h2>
-      <ul *ngFor="let item of items">
-        <div class="form-control">{{item.title}}</div>
-        <div class="form-control">{{item.category}}</div>
-        <div class="form-control">{{item.text}}</div>
 
 
-      </ul>
+
+
+
+
     </div>
 
-  </div>
-
-
-</div>

@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import {News} from "../../news/news.servise";
 import {DataService} from "../../news/News.date.servise";
 
+
+
 @Component({
   selector: 'app-news-add',
   templateUrl: './news-add.component.html',
@@ -9,6 +11,7 @@ import {DataService} from "../../news/News.date.servise";
 })
 export class NewsAddComponent implements OnInit {
 
+  public categoryitem:string[]= ['News','Politic','Word', 'Sport'];
 items:News[]  = [];
   constructor (private dataNews: DataService ) {}
 

@@ -1,20 +1,27 @@
-<div class="footer-nav">
+
     <div class="container">
         <div class="row">
             <div class="col-xs-12" >
                 <div class="panel panel-info">
                     <div class="panel-body">
                         <h2><span>{{items[id].title}} </span></h2>
-                        <i>{{items[id].category}}</i>
+                        <i>category - {{items[id].category}}</i>
 
                     </div>
                     <div class="panel-footer">{{items[id].text}}</div>
-                    <div >autor - {{items[id].autor}}</div>
+                    <div class="panel-footer">autor - {{items[id].autor}}</div>
 
                 </div>
-
+                <div class="news-nav center-block">
+                  <nav aria-label="...">
+                    <ul class="pager">
+                      <li><a [routerLink]="['/news/item',id-1]">Previous</a></li>
+                      <li><a [routerLink]="['/news/item',id+1]">Next</a></li>
+                    </ul>
+                  </nav>
+                </div>
             </div>
         </div>
     </div>
 
-</div>
+
