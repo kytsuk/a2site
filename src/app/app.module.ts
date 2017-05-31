@@ -19,7 +19,8 @@ const appRoutes: Routes =[
   { path: '', component: HomeComponent},
   { path: 'news', component: NewsComponent},
   { path: 'about', component: AboutComponent},
-  { path: 'addNews', component: NewsAddComponent}
+  { path: 'addNews', component: NewsAddComponent},
+  { path: 'news/item/:id', component: NewItemComponent}
 
 
 
@@ -44,7 +45,7 @@ const appRoutes: Routes =[
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [DataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [DataService]
 })
 export class AppModule { }

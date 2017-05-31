@@ -5,8 +5,7 @@ import {DataService} from "../News.date.servise";
 @Component({
   selector: 'app-new-list',
   templateUrl: './new-list.component.html',
-  styleUrls: ['./new-list.component.css'],
-  providers: [DataService]
+  styleUrls: ['./new-list.component.css']
 })
 export class NewListComponent implements OnInit {
 

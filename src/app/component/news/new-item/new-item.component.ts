@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
+import { ActivatedRoute} from '@angular/router';
+import { DataService } from "../News.date.servise";
 @Component({
   selector: 'app-new-item',
   templateUrl: './new-item.component.html',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NewItemComponent implements OnInit {
 
-  constructor() { }
+  public items  = [];
+  id: number;
+  constructor(private activateRoute: ActivatedRoute, private dataService: DataService){
 
-  ngOnInit() {
+    this.id = activateRoute.snapshot.params['id'];
+  }
+  ngOnInit(){
+    this.items = this.dataService.getData();
   }
 
 }
