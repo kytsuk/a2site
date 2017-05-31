@@ -1,12 +1,14 @@
 <div class="footer-nav">
 <div class="container">
   <div class="row">
-    <div class="col-xs-12" *ngFor="let item of items; let p = index">
+    <div class="col-xs-8" *ngFor="let item of items; let p = index">
       <div class="panel panel-info">
         <div class="panel-body">
           <h2><a [routerLink]="['item',p]" id={{p}}><span>{{item.title}} </span></a></h2>
-          <i>{{item.category}}</i>
-
+          <i>category - {{item.category}}</i>
+           <div>
+             <button class="btn btn-danger" >Delete</button>
+           </div>
         </div>
         <div class="panel-footer">{{item.text}}</div>
         <div >autor - {{item.autor}}</div>

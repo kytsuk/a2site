@@ -14,7 +14,7 @@ export class DataService{
         },
 
         { title:"Ukraine week",
-          category: "word",
+          category: "politic",
           text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur cum dicta dolorum enim error, facilis itaque iusto nam neque pariatur quam quas quisquam saepe tempore, " +
           "unde vitae? Aliquid atque doloremque expedita facilis in libero nam nostrum praesentium ratione totam.",
           autor: "Sam Smith"
@@ -22,7 +22,7 @@ export class DataService{
         },
 
       { title:"Sport turnir football",
-        category: "word",
+        category: "sport",
         text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. A consequatur cum dicta dolorum enim error, facilis itaque iusto nam neque pariatur quam quas quisquam saepe tempore, " +
       "unde vitae? Aliquid atque doloremque expedita facilis in libero nam nostrum praesentium ratione totam.",
         autor: "Sam Smith"
@@ -37,4 +37,5 @@ export class DataService{
 
         this.data.unshift(new News(title, category, text, autor));
     }
+
 }

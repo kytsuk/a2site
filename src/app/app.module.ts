@@ -14,6 +14,7 @@ import { NewListComponent } from './component/news/new-list/new-list.component';
 import { NewItemComponent } from './component/news/new-item/new-item.component';
 import { NewsAddComponent } from './component/pages/news-add/news-add.component';
 import {DataService} from "./component/news/News.date.servise";
+import { SidebarComponent } from './component/sidebar/sidebar.component';
 
 const appRoutes: Routes =[
   { path: '', component: HomeComponent},
@@ -37,7 +38,8 @@ const appRoutes: Routes =[
     FooterComponent,
     NewListComponent,
     NewItemComponent,
-    NewsAddComponent
+    NewsAddComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

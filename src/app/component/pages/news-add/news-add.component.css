@@ -1,3 +1,12 @@
 .form-horizontal{
   margin-top: 50px;
 }
+.form-group input, select, textarea{
+  margin: 15px 0 ;
+}
+.my-btn{
+  padding: 5px 50px;
+}
+.add-news{
+margin-bottom: 50px;
+}
