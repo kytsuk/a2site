@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from "../News.date.servise";
-import {News} from "../news.servise";
+
 
 @Component({
   selector: 'app-new-list',
   templateUrl: './new-list.component.html',
-  styleUrls: ['./new-list.component.css']
+  styleUrls: ['./new-list.component.css'],
+  providers: [DataService]
 })
 export class NewListComponent implements OnInit {
 
-  items: News[] = [];
+ public items = [];
   constructor (private dataService: DataService ) {}
 
 
