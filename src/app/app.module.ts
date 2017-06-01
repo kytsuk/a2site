@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import {Routes, RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { NewItemComponent } from './component/news/new-item/new-item.component';
 import { NewsAddComponent } from './component/pages/news-add/news-add.component';
 import {DataService} from "./component/news/News.date.servise";
 import { SidebarComponent } from './component/sidebar/sidebar.component';
+
 
 const appRoutes: Routes =[
   { path: '', component: HomeComponent},
@@ -40,12 +42,15 @@ const appRoutes: Routes =[
     NewItemComponent,
     NewsAddComponent,
     SidebarComponent
+
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    ReactiveFormsModule
   ],
   bootstrap: [AppComponent],
   providers: [DataService]

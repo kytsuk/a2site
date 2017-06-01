@@ -1,35 +1,39 @@
 <div class="conteiner ">
 <div class="row add-news">
-  <form NgForm>
+  <form [formGroup]="myForm" novalidate >
   <div class="form-group">
     <div class="col-xs-offset-3 col-xs-6">
-      <input class="form-control" name="title" [(ngModel)]="title" placeholder = "Title"  required />
-      <div [hidden]="title.valid || title.untouched" class="alert alert-danger">
-        Не указано имя
+      <input class="form-control" name="title"  placeholder = "Title"   formControlName="title"/>
+      <div class="alert alert-danger"
+           *ngIf="myForm.get('title').hasError('required') &&
+            myForm.get('title').touched">
+       No Title
       </div>
     </div>
   </div>
   <div class="form-group">
     <div class="col-xs-offset-3 col-xs-4">
       <select class="form-control" name="category"
- [(ngModel)]="category" placeholder = "Category" required>
-        <option *ngFor="let categ of categoryitem " [ngValue]="categ">{{categ}}</option>
+  placeholder = "Category" required formControlName="category">
+        <option >News</option>
+        <option >Fashion</option>
+        <option >Sport</option>
       </select>
     </div>
   </div>
   <div class="form-group">
     <div class="col-xs-offset-3 col-xs-6">
-      <textarea type="text" name="text" class="form-control" [(ngModel)]="text" placeholder="Post" rows="7" required> </textarea>
+      <textarea type="text" name="text" class="form-control"  placeholder="Post" rows="7" required formControlName="text"> </textarea>
     </div>
   </div>
   <div class="form-group">
     <div class="col-xs-offset-3 col-xs-6">
-      <input type="text" class="form-control" name="autor" [(ngModel)]="autor" placeholder="Autor" required/>
+      <input type="text" class="form-control" name="autor"  placeholder="Autor" required formControlName="autor"/>
     </div>
   </div>
   <div class="form-group">
     <div class="col-xs-offset-3 col-xs-2">
-      <button class="btn btn-success btn-lg my-btn" (click)="addItem(title, category, text, autor)">Add</button>
+      <button  class="btn btn-success btn-lg my-btn" (click)="addItem(myForm.value.title, myForm.value.category, myForm.value.text, myForm.value.autor)">Add</button>
     </div>
   </div>
   </form>

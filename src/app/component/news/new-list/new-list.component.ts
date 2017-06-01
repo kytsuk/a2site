@@ -16,9 +16,15 @@ export class NewListComponent implements OnInit {
    this.visibility = !this.visibility;
   }
  public items = [];
+
+
   constructor (private dataService: DataService ) {}
 
+    remove(index:number)  {
+     this.dataService.removedate(index);
 
+
+    };
 
   ngOnInit(){
     this.items = this.dataService.getData();

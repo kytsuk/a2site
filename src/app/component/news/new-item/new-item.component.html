@@ -15,8 +15,8 @@
                 <div class="news-nav center-block">
                   <nav aria-label="...">
                     <ul class="pager">
-                      <li><a [routerLink]="['/news/item',id-1]">Previous</a></li>
-                      <li><a [routerLink]="['/news/item',id+1]">Next</a></li>
+                      <li><a [routerLink]="['/news/item', pagePrev(id)]">Previous</a></li>
+                      <li><a [routerLink]="['/news/item',pageNext(id)]">Next</a></li>
                     </ul>
                   </nav>
                 </div>
