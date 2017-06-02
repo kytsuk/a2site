@@ -41,7 +41,7 @@ const appRoutes: Routes =[
     NewListComponent,
     NewItemComponent,
     NewsAddComponent,
-    SidebarComponent
+    SidebarComponent,
 
   ],
   imports: [
